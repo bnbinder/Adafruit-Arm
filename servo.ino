@@ -45,11 +45,11 @@ void setup() {
   Serial.begin(9600);
   Serial.println("program started");
 
-  pinMode(buttonPin, INPUT);
-  pinMode(buttonPin, INPUT);
-  pinMode(buttonPin, INPUT);
-  pinMode(buttonPin, INPUT);
-  pinMode(buttonPin, INPUT);
+  pinMode(buttonnumINDEX, INPUT);
+  pinMode(buttonnumMIDDLE, INPUT);
+  pinMode(buttonnumRING, INPUT);
+  pinMode(buttonnumPINKY, INPUT);
+  pinMode(buttonnumTHUMB, INPUT);
 
   pwm.begin();
 
