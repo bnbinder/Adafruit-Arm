@@ -12,19 +12,22 @@ uint8_t servonumINDEX = 0;
 uint8_t servonumMIDDLE = 1;
 uint8_t servonumRING = 2;
 uint8_t servonumPINKY = 3;
-uint8_t servonumTHUMB = 4;
+uint8_t servonumTHUMBFINGER = 4;
+uint8_t servonumTHUMBBASE = 5;
 
 int buttonnumINDEX = 0;
 int buttonnumMIDDLE = 1;
 int buttonnumRING = 2;
 int buttonnumPINKY = 3;
-int buttonnumTHUMB = 4;
+int buttonnumTHUMBFINGER = 4;
+int buttonnumTHUMBBASE = 5;
 
 int buttonStateINDEX = 0;
 int buttonStateMIDDLE = 0;
 int buttonStateRING = 0;
 int buttonStatePINKY = 0;
-int buttonStateTHUMB = 0;
+int buttonStateTHUMBFINGER = 0;
+int buttonStateTHUMBBASE = 0;
 
 double maxReleaseINDEX = 0;
 double maxContractionINDEX = 120;
@@ -38,8 +41,11 @@ double maxContractionRING = 0;
 double maxReleasePINKY = 160;
 double maxContractionPINKY = 90;
 
-double maxReleaseTHUMB = 0;
-double maxContractionTHUMB = 0;
+double maxReleaseTHUMBFINGER = 0;
+double maxContractionTHUMBFINGER = 0;
+
+double maxReleaseTHUMBBASE = 0;
+double maxContractionTHUMBBASE = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -49,7 +55,9 @@ void setup() {
   pinMode(buttonnumMIDDLE, INPUT);
   pinMode(buttonnumRING, INPUT);
   pinMode(buttonnumPINKY, INPUT);
-  pinMode(buttonnumTHUMB, INPUT);
+  pinMode(buttonnumTHUMBFINGER, INPUT);
+  pinMode(buttonnumTHUMBBASE INPUT);
+
 
   pwm.begin();
 
@@ -100,6 +108,10 @@ void setup() {
 // 0 --> 180 push fingy out
 // 0 <-- 180 pull fingy in
 
+//for thumb base
+// 0 --> 180 push base out
+// 0 <-- 180 pull base in
+
 void moveFingy(double servoNum, double degrees)
 {
    double pulsePOSITIONnow = (map(degrees, 0, 180, SERVOMIN, SERVOMAX));
@@ -118,11 +130,14 @@ void loop() {
   moveFingy(servonumINDEX, maxContractionINDEX);
   moveFingy(servonumMIDDLE, maxContractionMIDDLE);
   moveFingy(servonumPINKY, maxContractionPINKY);
+  moveFingy(servonumTHUMBBASE, maxContrationTHUMBBASE);
 
-delay(3000);
+  delay(3000);
+
   moveFingy(servonumINDEX, maxReleaseINDEX);
   moveFingy(servonumMIDDLE, maxReleaseMIDDLE);
   moveFingy(servonumPINKY, maxReleasePINKY);
+  moveFingy(servonumTHUMBBASE, maxReleaseTHUMBBASE);
 
   delay(3000);
 /*
