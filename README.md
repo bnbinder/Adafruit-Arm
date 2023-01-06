@@ -22,11 +22,11 @@ servonumTHUMB = [YOURIDHERE]
 
 buttons are:
 ```
-buttonINDEX = [YOURIDHERE]
-buttonMIDDLE = [YOURIDHERE]
-buttonRING = [YOURIDHERE]
-buttonPINKY = [YOURIDHERE]
-buttonTHUMB = [YOURIDHERE]
+buttonnumINDEX = [YOURIDHERE]
+buttonnumMIDDLE = [YOURIDHERE]
+buttonnumRING = [YOURIDHERE]
+buttonnumPINKY = [YOURIDHERE]
+buttonnumTHUMB = [YOURIDHERE]
 ```
 
 # Calibrating Max Contract and Release Positions
