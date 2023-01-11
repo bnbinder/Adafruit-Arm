@@ -1,6 +1,6 @@
 # Adafruit-Arm
 This is the code to run the Adafruit controlled arm. Parts include:
-- 1 Fishline controlled arm
+- 1 Arm with jointed fingers and holes to those jointed fingers, allowing fishline to be threaded through
 - 1 Arduino
 - 1 Adafruit 16 servo sheild
 - 5 REV Smart Robot Servos
