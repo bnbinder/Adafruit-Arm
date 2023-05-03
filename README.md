@@ -1,4 +1,11 @@
 # Adafruit-Arm
+
+<div align = "center">
+<img src = "readme.gif" width = 1000 height = 300>
+</div>
+<br>
+<br>
+
 This is the code to run the Adafruit controlled arm. Parts include:
 - 1 Arm with jointed fingers and holes to those jointed fingers, allowing fishline to be threaded through
 - 1 Arduino
